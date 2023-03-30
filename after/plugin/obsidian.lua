@@ -25,14 +25,18 @@ require("obsidian").setup({
         else
             return "unnamed " .. tostring(os.time())
         end
-    end
+    end,
+    disable_frontmatter = true
 })
 
 -- map ony for markdown
 local mapx = require'mapx'
 mapx.map("gd", ":ObsidianFollowLink<CR>",  "silent", { ft = "markdown", desc = "Follow obsidian link"})
+mapx.map("<leader>d", ":ObsidianFollowLink<CR>",  "silent", { ft = "markdown", desc = "Follow obsidian link"})
 mapx.map("<leader>fn", ":ObsidianNew<CR>",  "silent", { ft = "markdown", desc = "Create new obsidian note"})
+mapx.map("<leader>n", ":ObsidianNew<CR>",  "silent", { ft = "markdown", desc = "Create new obsidian note"})
 mapx.map("gt", ":ObsidianTemplate<CR>",  "silent", { ft = "markdown", desc = "Obsidian create template"})
+mapx.map("<leader>t", ":ObsidianTemplate<CR>",  "silent", { ft = "markdown", desc = "Obsidian create template"})
 mapx.map("gr", ":ObsidianBacklinks<CR>",  "silent", { ft = "markdown", desc = "Obsidian list backlinks"})
 
 mapx.vmap("K", ":ObsidianLinkNew<CR>",  "silent", { ft = "markdown", desc = "Link selection"})
