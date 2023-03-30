@@ -27,7 +27,7 @@ vim.keymap.set("n", "N", "Nzzzv")
 vim.keymap.set("x", "<leader>p", [["_dP]])
 
 -- delete without overwriting buffer
-vim.keymap.set({"n", "v"}, "<leader>d", [["_d]])
+vim.keymap.set({"n", "v"}, "<leader>D", [["_d]])
 
 -- yank into system clipboard
 vim.keymap.set({"n", "v"}, "<leader>Y", [["+y]])
