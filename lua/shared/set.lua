@@ -29,3 +29,5 @@ vim.opt.completeopt = 'menuone,noselect'
 -- increase timeouts for slow command input
 vim.opt.timeoutlen = 10000
 vim.opt.ttimeoutlen = 100
+
+vim.opt.title = true
