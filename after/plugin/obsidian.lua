@@ -31,16 +31,19 @@ require("obsidian").setup({
 
 -- map ony for markdown
 local mapx = require'mapx'
-mapx.map("gd", ":ObsidianFollowLink<CR>",  "silent", { ft = "markdown", desc = "Follow obsidian link"})
-mapx.map("<leader>d", ":ObsidianFollowLink<CR>",  "silent", { ft = "markdown", desc = "Follow obsidian link"})
-mapx.map("<leader>fn", ":ObsidianNew<CR>",  "silent", { ft = "markdown", desc = "Create new obsidian note"})
-mapx.map("<leader>n", ":ObsidianNew<CR>",  "silent", { ft = "markdown", desc = "Create new obsidian note"})
-mapx.map("gt", ":ObsidianTemplate<CR>",  "silent", { ft = "markdown", desc = "Obsidian create template"})
-mapx.map("<leader>t", ":ObsidianTemplate<CR>",  "silent", { ft = "markdown", desc = "Obsidian create template"})
-mapx.map("gr", ":ObsidianBacklinks<CR>",  "silent", { ft = "markdown", desc = "Obsidian list backlinks"})
+mapx.nmap("gd", ":ObsidianFollowLink<CR>",  "silent", { ft = "markdown", desc = "Follow obsidian link"})
+mapx.nmap("<leader>d", ":ObsidianFollowLink<CR>",  "silent", { ft = "markdown", desc = "Follow obsidian link"})
+mapx.nmap("<leader>fn", ":ObsidianNew<CR>",  "silent", { ft = "markdown", desc = "Create new obsidian note"})
+mapx.nmap("<leader>n", ":ObsidianNew<CR>",  "silent", { ft = "markdown", desc = "Create new obsidian note"})
+mapx.nmap("gt", ":ObsidianTemplate<CR>",  "silent", { ft = "markdown", desc = "Obsidian create template"})
+mapx.nmap("<leader>t", ":ObsidianTemplate<CR>",  "silent", { ft = "markdown", desc = "Obsidian create template"})
+mapx.nmap("gr", ":ObsidianBacklinks<CR>",  "silent", { ft = "markdown", desc = "Obsidian list backlinks"})
 
 mapx.vmap("K", ":ObsidianLinkNew<CR>",  "silent", { ft = "markdown", desc = "Link selection"})
 mapx.nmap("K", "viwK",  "silent", { ft = "markdown", desc = "Link word under cursor"})
 
 -- search for todos, closing bracket always broke the mapping
-mapx.map("<leader>e", "/[<Space><CR>",  "silent", { ft = "markdown", desc = "Obsidian list backlinks"})
+mapx.nmap("<leader>e", "/[<Space><CR>",  "silent", { ft = "markdown", desc = "Obsidian list backlinks"})
+
+
+mapx.nmap("<leader>fd", ":call delete(expand('%')) | bdelete! <CR>",  "silent", { ft = "markdown", desc = "Obsidian: Delete file"})
