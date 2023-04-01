@@ -41,6 +41,8 @@ mapx.nmap("gr", ":ObsidianBacklinks<CR>",  "silent", { ft = "markdown", desc = "
 
 mapx.vmap("K", ":ObsidianLinkNew<CR>",  "silent", { ft = "markdown", desc = "Link selection"})
 mapx.nmap("K", "viwK",  "silent", { ft = "markdown", desc = "Link word under cursor"})
+mapx.vmap("<space>K", ":ObsidianLink<CR>",  "silent", { ft = "markdown", desc = "Link selection"})
+mapx.nmap("K", "viw<space>K",  "silent", { ft = "markdown", desc = "Link word under cursor"})
 
 -- search for todos, closing bracket always broke the mapping
 mapx.nmap("<leader>e", "/[<Space><CR>",  "silent", { ft = "markdown", desc = "Obsidian list backlinks"})

@@ -32,7 +32,6 @@ lsp.on_attach(function(client, bufnr)
   end
 
   nmap('<leader>rn', vim.lsp.buf.rename, '[R]e[n]ame')
-  nmap('<leader>fr', vim.lsp.buf.rename, '[F]ile [R]ename')
 
   nmap('<leader>ca', vim.lsp.buf.code_action, '[C]ode [A]ction')
 
