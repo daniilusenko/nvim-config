@@ -1,3 +1,5 @@
+vim.api.nvim_exec ('language en_US', true)
+
 vim.opt.nu = true
 vim.opt.relativenumber = true
 
