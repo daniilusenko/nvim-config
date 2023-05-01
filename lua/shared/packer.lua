@@ -24,7 +24,6 @@ return require('packer').startup(function(use)
 
   use('nvim-lua/plenary.nvim')
   use('hrsh7th/nvim-cmp')
-  use('epwalsh/obsidian.nvim')
 
   use {
 	  'numToStr/Comment.nvim',
