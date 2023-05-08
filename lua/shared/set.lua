@@ -1,3 +1,5 @@
+vim.api.nvim_set_var('netrw_bufsettings', 'noma nomod nu nobl nowrap ro')
+
 if vim.loop.os_uname().sysname == "Windows" then
 	vim.api.nvim_exec('language en_US', true)
 end
