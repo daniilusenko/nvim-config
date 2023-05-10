@@ -15,6 +15,8 @@ vim.opt.expandtab = true
 
 vim.opt.smartindent = true
 
+vim.g.editorconfig = false -- disable checking for a .editorconfig file
+
 vim.opt.swapfile = false
 vim.opt.backup = false
 
