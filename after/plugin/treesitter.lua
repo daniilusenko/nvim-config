@@ -1,24 +1,41 @@
 require'nvim-treesitter.configs'.setup {
-  -- A list of parser names, or "all" (the five listed parsers should always be installed)
 
-  ensure_installed = { "markdown", "markdown_inline", "c", "lua", "vim", "query", "javascript", "typescript" },
+    -- A list of parser names, or "all" (the five listed parsers should always be installed)
 
-  -- Install parsers synchronously (only applied to `ensure_installed`)
-  sync_install = false,
+    ensure_installed = { 
+        "markdown",
+        "markdown_inline",
+        "c",
+        "c_sharp",
+        "lua",
+        "vim",
+        "query",
+        "javascript",
+        "typescript" 
+    },
 
-  -- Automatically install missing parsers when entering buffer
-  -- Recommendation: set to false if you don't have `tree-sitter` CLI installed locally
-  auto_install = true,
+        -- Install parsers synchronously (only applied to `ensure_installed`)
+        sync_install = false,
 
-  highlight = {
-    enable = true,
+        -- Automatically install missing parsers when entering buffer
+        -- Recommendation: set to false if you don't have `tree-sitter` CLI installed locally
+        auto_install = true,
 
-    -- Setting this to true will run `:h syntax` and tree-sitter at the same time.
-    -- Set this to `true` if you depend on 'syntax' being enabled (like for indentation).
-    -- Using this option may slow down your editor, and you may see some duplicate highlights.
-    -- Instead of true it can also be a list of languages
-    additional_vim_regex_highlighting = false,
+        highlight = {
+            enable = true,
 
-    additional_vim_regex_highlighting = { "markdown" },
-  },
-}
+            -- Setting this to true will run `:h syntax` and tree-sitter at the same time.
+            -- Set this to `true` if you depend on 'syntax' being enabled (like for indentation).
+            -- Using this option may slow down your editor, and you may see some duplicate highlights.
+            -- Instead of true it can also be a list of languages
+            additional_vim_regex_highlighting = false,
+
+            additional_vim_regex_highlighting = { "markdown" },
+        },
+    }
+
+-- NOTE: compiling tree sitter parsers requires c 64 compiler
+-- on windows `scoop install gcc`
+if vim.loop.os_uname().sysname == "Windows_NT" then
+    require('nvim-treesitter.install').compilers = { "gcc" }
+end
