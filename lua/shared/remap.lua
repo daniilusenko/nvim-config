@@ -2,7 +2,7 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = ' '
 
 -- terminal
-vim.api.nvim_set_keymap('t', '<Esc>', '<C-\\><C-n>', { noremap = true }) 
+vim.api.nvim_set_keymap('t', '<Space><Esc>', '<C-\\><C-n>', { noremap = true }) 
 
 -- open project view
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
