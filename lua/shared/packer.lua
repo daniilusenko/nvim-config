@@ -26,9 +26,42 @@ return require('packer').startup(function(use)
   use('nvim-lua/plenary.nvim')
   use('hrsh7th/nvim-cmp')
 
+  use({
+      "jackMort/ChatGPT.nvim",
+      config = function()
+          require("chatgpt").setup({
+              chat = {
+                  -- FIXME keymaps dont seem to work
+                  -- keymaps = {
+                  --     close = { "<Space><Esc>" },
+                  --     yank_last = "<Leader>y",
+                  --     yank_last_code = "<Leader>k",
+                  --     scroll_up = "<C-u>",
+                  --     scroll_down = "<C-d>",
+                  --     new_session = "N",
+                  --     cycle_windows = "<Tab>",
+                  --     cycle_modes = "<C-f>",
+                  --     select_session = "<Space>",
+                  --     rename_session = "r",
+                  --     delete_session = "d",
+                  --     draft_message = "<C-d>",
+                  --     toggle_settings = "<Leader>o",
+                  --     toggle_message_role = "<C-r>",
+                  --     toggle_system_role_open = "<C-s>"
+                  -- }
+              }
+          })
+      end,
+      requires = {
+          "MunifTanjim/nui.nvim",
+          "nvim-lua/plenary.nvim",
+          "nvim-telescope/telescope.nvim"
+      }
+  })
+
   use {
-	  'numToStr/Comment.nvim',
-	  config = function()
+      'numToStr/Comment.nvim',
+      config = function()
 		  require('Comment').setup({
               mappings = {
                   extra = false
