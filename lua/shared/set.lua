@@ -1,3 +1,5 @@
+vim.api.nvim_command('set clipboard=unnamedplus')
+
 vim.api.nvim_set_var('netrw_bufsettings', 'noma nomod nu nobl nowrap ro')
 
 if vim.loop.os_uname().sysname == "Windows" then
@@ -21,7 +23,7 @@ vim.opt.swapfile = false
 vim.opt.backup = false
 
 -- only works on linux? need correct handling 
--- vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
+-- vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
 
 vim.opt.undofile = true
 
