@@ -19,8 +19,8 @@ vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
 
 -- fast up down
-vim.keymap.set("n", "<BS>", "<C-d>")
-vim.keymap.set("n", "<leader><BS>", "<C-u>")
+vim.keymap.set({"n", "v"}, "<BS>", "<C-d>")
+vim.keymap.set({"n", "v"}, "<leader><BS>", "<C-u>")
 
 -- keep cursor in middle when searching
 vim.keymap.set("n", "n", "nzzzv")
